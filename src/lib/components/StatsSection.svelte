@@ -1,24 +1,24 @@
 <script lang="ts">
   const stats = [
     {
-      label: "30+ People",
-      desc: "You're a small, but mighty team of curious problem-solvers and explorers. With a versatile, Swiss-knife mentality, we thrive on tackling diverse challenges. Our core team is tight-knit, yet we seamlessly tap into a wider network of experts when needed. Here, theory meets practice, and together, we get things done.",
-      img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200"
+      label: "$300k–$10M",
+      desc: "Our sweet spot. Post-startup contractors who've proven their craft but hit a growth ceiling. You're honest, hardworking, and humble enough to ask for help. You want to become better leaders, not just better managers.",
+      img: ""
     },
     {
-      label: "14+ Awards",
-      desc: "Our work speaks for itself—recognized internationally, we've already earned some awards. These accolades reflect the passion and innovation we pour into every project, pushing boundaries and delivering results that make an impact.",
-      img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=200"
+      label: "Triage-First Model",
+      desc: "We don't follow the playbook. We identify your 'bleeding neck'—the most critical issue—and solve it first. This creates immediate impact and momentum. No theory, no binders, just results.",
+      img: ""
     },
     {
-      label: "CGN, BLN, Remote",
-      desc: "Headquartered in Cologne, with an expanding team in Berlin, we also embrace remote work. Our colleagues span across cities like Barcelona, Stuttgart, Munich, and more, bringing a mix of perspectives and expertise to everything we do. Whether in the office or working remotely, we stay connected and collaborative.",
-      img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=200"
+      label: "Operator-Led Systems",
+      desc: "We're not consultants who disappear after handing you advice. We're operators who implement JobTread, CompanyCam, and ClickUp, then stay with you through the transformation. We get in the trenches.",
+      img: ""
     },
     {
-      label: "B-Corp",
-      desc: "We've officially joined the ranks of B-Corp certified companies. This means we meet the highest standards of social and environmental performance, accountability, and transparency. We're proud to use business as a force for good, ensuring our impact extends beyond just profit.",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/B_Corp_Logo.svg/1200px-B_Corp_Logo.svg.png" // Placeholder
+      label: "Inside-Out Approach",
+      desc: "You can't fix a business if the leader is broken. We address imposter syndrome, burnout, and identity crisis alongside business metrics. This is human-centered consulting for the trades.",
+      img: ""
     }
   ];
 </script>
@@ -26,7 +26,7 @@
 <section class="py-24 px-6 md:px-12 bg-white border-t border-gray-100">
   <div class="mb-16">
     <p class="text-gray-500 max-w-xl">
-      Curious about who we are? Here's a snapshot of the team, our achievements, and the milestones we're proud of.
+      We work with contractors who excel at their craft but need help with the business side. Here's what makes us different.
     </p>
   </div>
 
@@ -38,7 +38,13 @@
            <p class="text-xs leading-relaxed text-gray-500">{stat.desc}</p>
         </div>
         <div class="w-full md:w-1/6 flex justify-end">
-           <img src={stat.img} alt={stat.label} class="w-20 h-20 object-cover rounded bg-gray-100" />
+           {#if stat.img}
+             <img src={stat.img} alt={stat.label} class="w-20 h-20 object-cover rounded bg-gray-100" />
+           {:else}
+             <div class="w-20 h-20 rounded bg-gray-100 flex items-center justify-center">
+               <div class="w-8 h-8 border-2 border-gray-300 rounded"></div>
+             </div>
+           {/if}
         </div>
       </div>
     {/each}

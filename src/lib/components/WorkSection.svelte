@@ -1,53 +1,53 @@
 <script lang="ts">
-  const projects = [
+  const services = [
     {
-      client: "Red Bull",
-      desc: "A global platform built to Scale, Evolve, and Perform.",
-      bg: "bg-[#000c2d]",
-      img: "", // Placeholder logic handled in template
-      dark: true
-    },
-    {
-      client: "Volvo",
-      desc: "Redefining how people experience insurance.",
-      bg: "bg-gray-200",
-      img: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&q=80&w=800",
-      dark: false
-    },
-    {
-      client: "The Organics",
-      desc: "Translating a refreshing identity into a bold platform.",
-      bg: "bg-[#8da356]",
-      img: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=800",
-      dark: false
-    },
-    {
-      client: "Isar Aerospace",
-      desc: "Launching a brand journey into orbit.",
+      title: "Operational Triage",
+      desc: "We identify your 'bleeding neck'—the most critical issue—and solve it first. No theory, just immediate impact.",
       bg: "bg-black",
       img: "",
       dark: true
     },
     {
-      client: "REWE",
-      desc: "Digital Convenience in your Pocket.",
-      bg: "bg-[#f0f0f0]",
-      img: "https://images.unsplash.com/photo-1512428559087-560fa5ce7d87?auto=format&fit=crop&q=80&w=800",
-      dark: false,
-      full: true // Making REWE full width to align last two items
-    },
-    {
-      client: "Alpha Tauri",
-      desc: "Designing the interface of wearable intelligence.",
-      bg: "bg-[#e0e0e0]",
-      img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800",
+      title: "Systems Implementation",
+      desc: "JobTread, CompanyCam, ClickUp—we don't just recommend tools, we install them and make them work for your team.",
+      bg: "bg-gray-100",
+      img: "/generated/image-contractor-reviewing-blueprints-at-a-con-1765515128817-0.webp",
       dark: false
     },
     {
-      client: "Zalando",
-      desc: "Designing the Zalando E-Commerce Operating System.",
-      bg: "bg-[#d8c5f0]",
-      img: "https://images.unsplash.com/photo-1555421689-49263376da7a?auto=format&fit=crop&q=80&w=800",
+      title: "Leadership Development",
+      desc: "You can't fix a business if the leader is broken. We address imposter syndrome, burnout, and identity alongside metrics.",
+      bg: "bg-gray-900",
+      img: "/generated/image-construction-business-owner-in-their-off-1765515131903-1.webp",
+      dark: true
+    },
+    {
+      title: "Fractional CFO Services",
+      desc: "Transform messy books into actionable intelligence. Understand your true margins, not just top-line revenue.",
+      bg: "bg-white border border-gray-200",
+      img: "",
+      dark: false
+    },
+    {
+      title: "General Contractors",
+      desc: "From reactive firefighting to confident, visionary leadership. Build a business that thrives without your constant presence.",
+      bg: "bg-gray-100",
+      img: "/generated/image-contractor-using-tablet-on-job-site-to-d-1765515134510-2.webp",
+      dark: false,
+      full: true
+    },
+    {
+      title: "Subcontractors",
+      desc: "Excel at your craft while we handle the business fundamentals—contracts, insurance, cash flow, and team coordination.",
+      bg: "bg-gray-50",
+      img: "/generated/image-two-contractors-collaborating-and-review-1765515137009-3.webp",
+      dark: false
+    },
+    {
+      title: "Remodeling Companies",
+      desc: "Scale your remodeling business with systems that reduce site visits and automate workflows without sacrificing quality.",
+      bg: "bg-gray-100",
+      img: "/generated/image-contractor-working-on-residential-remode-1765515139618-4.webp",
       dark: false
     }
   ];
@@ -56,25 +56,25 @@
 <section class="px-6 md:px-12 py-24 bg-white">
   <div class="max-w-3xl mb-16">
     <h2 class="text-2xl md:text-3xl font-medium leading-tight">
-      <span class="font-bold">We orchestrate strategy, design, and technology</span> to create digital experiences that connect with millions and give you the edge that sets you apart.
+      <span class="font-bold">We're operators, not consultants.</span> We get in the trenches to triage the mess, implement systems that create freedom, and develop leaders who can scale without breaking.
     </h2>
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-12">
-    {#each projects as project}
-      <div class="group cursor-pointer {project.full ? 'md:col-span-2' : ''}">
-        <div class={`aspect-[4/3] w-full rounded-lg overflow-hidden relative ${project.bg} mb-4 ${project.full ? 'md:aspect-[2.5/1]' : ''}`}>
-          {#if project.img}
-             <img src={project.img} alt={project.client} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+    {#each services as service}
+      <div class="group cursor-pointer {service.full ? 'md:col-span-2' : ''}">
+        <div class={`aspect-[4/3] w-full rounded-lg overflow-hidden relative ${service.bg} mb-4 ${service.full ? 'md:aspect-[2.5/1]' : ''}`}>
+          {#if service.img}
+             <img src={service.img} alt={service.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
           {:else}
-             <!-- Placeholder for logos on solid bg -->
+             <!-- Icon/graphic placeholder -->
              <div class="w-full h-full flex items-center justify-center">
-                <span class={`text-2xl font-bold ${project.dark ? 'text-white' : 'text-black'}`}>{project.client} Logo</span>
+                <div class={`w-16 h-16 border-2 ${service.dark ? 'border-white' : 'border-black'} rounded`}></div>
              </div>
           {/if}
         </div>
-        <h3 class="text-sm font-bold mb-1">{project.client}</h3>
-        <p class="text-sm text-gray-600">{project.desc}</p>
+        <h3 class="text-sm font-bold mb-1">{service.title}</h3>
+        <p class="text-sm text-gray-600">{service.desc}</p>
       </div>
     {/each}
   </div>

@@ -1,19 +1,19 @@
 <script lang="ts">
   const cards = [
     {
-      title: "We're Not Just a Vendor...",
-      subtitle: "We're Your Partner In Crime.",
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
+      title: "We Don't Hand You a Binder...",
+      subtitle: "We Get in the Trenches.",
+      image: "/generated/image-experienced-contractor-mentoring-younger-1765515142157-5.webp"
     },
     {
-      title: "We Don't Just Follow Trends...",
-      subtitle: "We Shape New Territories.",
-      image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
+      title: "We Don't Speak Consultant...",
+      subtitle: "We Speak Builder.",
+      image: "/generated/image-construction-business-owner-in-hardhat-r-1765515144831-6.webp"
     },
     {
-      title: "We Don't Play By The Book...",
-      subtitle: "We Write It Together.",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
+      title: "We Don't Offer False Choices...",
+      subtitle: "Profitability AND Sanity.",
+      image: "/generated/image-contractor-at-desk-with-construction-pla-1765515147586-7.webp"
     }
   ];
 </script>
@@ -21,7 +21,7 @@
 <section class="py-24 px-6 md:px-12 bg-white">
   <div class="max-w-2xl mb-16">
     <p class="text-xl md:text-2xl leading-relaxed text-gray-800">
-      Collaboration isn't just a buzzword—it's how we roll. We're not here to hand off some cookie-cutter deliverable and disappear; we're in it with you, from day one.
+      We're not theorists. We're builders who became business operators. We understand the gap between being a skilled tradesperson and running a thriving company—because we've lived it.
     </p>
   </div>
 
@@ -35,8 +35,8 @@
         <p class="text-sm font-bold">{card.subtitle}</p>
         
         <div class="flex justify-between mt-4 text-xs text-gray-400">
-           <span>01</span>
-           <span>-></span>
+           <span>→</span>
+           <span>Built for builders</span>
         </div>
       </div>
     {/each}
